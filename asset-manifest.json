@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Loopstudios-landing-page-reactProject/static/css/main.fea0d165.css",
+    "main.js": "/Loopstudios-landing-page-reactProject/static/js/main.26d4fb1c.js",
+    "static/media/image-hero.jpg": "/Loopstudios-landing-page-reactProject/static/media/image-hero.9b5aacead42e955824d3.jpg",
+    "index.html": "/Loopstudios-landing-page-reactProject/index.html",
+    "main.fea0d165.css.map": "/Loopstudios-landing-page-reactProject/static/css/main.fea0d165.css.map",
+    "main.26d4fb1c.js.map": "/Loopstudios-landing-page-reactProject/static/js/main.26d4fb1c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fea0d165.css",
+    "static/js/main.26d4fb1c.js"
+  ]
+}
