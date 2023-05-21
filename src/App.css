@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+*
+{
+    padding: 0;
+    margin: 0;
+    font-size: 6vw;
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --DarkGray: hsl(0, 0%, 55%);
+    --VeryDarkGray: hsl(0, 0%, 41%);
+}
+
+body
+{
+    overflow-x: hidden;
+}
+
+main
+{
+    width: 90vw;
+    margin: auto;
+}
+
+/* NAV STYLES */
+
+.closedNav-section
+{
+    padding: 1.2rem 1rem;
+    height: 20rem;
+    background: url(../../reactfolder/public/images/mobile/image-hero.jpg) no-repeat;
+    background-size: cover;
+    background-position: bottom 100% left 0%;
+    padding-bottom: 7rem;
+}
+
+.openedNav-section
+{
+    padding: 1.2rem 1rem;
+    background-color: var(--Black);
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    width: 88.1vw;
+    top: 0;
+    left: 0;
+    animation: showNavMenu 0.7s;
+}
+
+@keyframes showNavMenu {
+    0%
+    {
+        background-color:rgb(0, 0, 0, 0);
+    }
+
+    100%
+    {
+        background-color:rgb(0, 0, 0, 1);
+    }
+}
+
+.nav--desktop-list
+{
+    display: none;
+}
+
+.nav--top-content
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav--logo
+{
+    width: 7rem;
+}
+
+.nav--hamburger
+{
+    width: 1.2rem;
+    cursor: pointer;
+}
+
+.nav--close
+{
+    width: 1.2rem;
+    cursor: pointer;
+}
+
+.nav--header-box
+{
+    color: var(--White);
+    padding: 0.7rem 1.2rem;
+    width: 90;
+    border: 0.5vw solid var(--White);
+    margin-top: 8rem;
+}
+
+.nav--header
+{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Josefin+Sans', sans-serif;
+    font-size: 1.6rem
+}
+
+.nav--mobile-list
+{
+    list-style-type: none;
+    font-family: 'Josefin+Sans', sans-serif;
+    margin-top: 6rem
+}
+
+.nav--mobile-list-element
+{
+    color: var(--White);
+    opacity: .7;
+    font-size: 1.1rem;
+    margin: 1.2rem 0;
+    width: fit-content;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.nav--mobile-list-element:hover
+{
+    color: var(--White);
+    opacity: 1;
+}
+
+/* DESCRIPTION STYLES */
+
+.description--image
+{
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.description--header
+{
+    text-transform: uppercase;
+    font-family: 'Josefin+Sans', sans-serif;
+    margin: auto;
+    font-weight: 300;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.description--paragraph
+{
+    text-align: center;
+    font-family: 'Josefin+Sans', sans-serif;
+    font-weight: 600;
+    width: 90%;
+    margin: auto;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    line-height: 1.1rem;
+    color: var(--VeryDarkGray);
+}
+
+/* CREATIONS STYLES */
+
+.creations--card-img-desktop
+{
+    display: none;
+}
+
+.creations--header
+{
+    text-align: center;
+    font-family: 'Josefin+Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.creations--card-box
+{
+    margin-top: 0.5rem;
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.creations--card
+{
+    width: 100%;
+    position: relative;
+}
+
+.creations--card-img-mobile
+{
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+.creations--card-text
+{
+    bottom: 0.2rem;
+    font-family: 'Josefin+Sans', sans-serif;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.creations--card-overlay
+{
+    top: 0rem;
+    width: 100%;
+    height: 95.4%;
+    position: absolute;
+    cursor: pointer;
+    transition: 0.5s;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 1) -10%, rgba(255, 255, 255, 0) 60%);
+}
+
+.creations--card-overlay:hover
+{
+    background-color: rgba(255, 255, 255, .6);
+    background-image: none;
+}
+
+.creations--card-overlay:hover .creations--card-text
+{
+    color: var(--Black);
+}
+
+.creations--card-text
+{
+    width:35%;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-left: 1rem;
+    margin-top: 2.5rem;
+}
+
+.creations--button
+{
+    background-color: var(--White);
+    font-family: 'Alata', sans-serif;
+    text-transform: uppercase;
+    padding: 0.35rem 2.3rem;
+    letter-spacing: 0.2rem;
+    border: 0.6vw solid var(--Black);
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.creations--button:hover
+{
+    background-color: var(--Black);
+    color: var(--White);
+}
+
+.creations--button-container
+{
+    display: flex;
+    justify-content: center;
+}
+
+/* FOOTER STYLES */
+
+footer
+{
+    background-color: var(--Black);
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.footer--logo
+{
+    width: 7rem;
+    margin-top: 2rem;
+}
+
+.footer--list
+{
+    color: var(--White);
+    list-style-type: none;
+    font-family: 'Alata', sans-serif;
+    margin-top: 1.75rem;
+}
+
+.footer--list li
+{
+    font-size: 0.8rem;
+    margin: 0.9rem auto;
+    border-bottom: 0.5vw solid var(--Black);
+    width: fit-content;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.footer--list li:hover
+{
+    border-bottom: 0.5vw solid var(--White);
+}
+
+.footer--icon-container
+{
+    margin-top: 2rem;
+}
+
+.footer--icon-container img
+{
+    width: 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 0.5vw solid var(--Black);
+    margin: 0 0.4rem;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.footer--icon-container img:hover
+{
+    border-bottom: 0.5vw solid var(--White);
+}
+
+.footer--copyright
+{
+    color: var(--DarkGray);
+    font-size: 0.65rem;
+    margin-top: 0.5rem;
+    font-family: 'Alata', sans-serif;
+}
+
+/* DESKTOP  */
+
+@media (min-width: 768px) {
+    *
+    {
+        font-size: 3.5vw;
+    }
+
+    .nav--desktop-list
+    {
+        display: flex;
+    }
+
+    .nav--hamburger
+    {
+        display: none;
+    }
+
+    .openedNav-section
+    {
+        display: none;
+    }
+
+    .nav--desktop-list
+    {
+        list-style-type: none;
+    }
+
+    .nav--desktop-list-element
+    {
+        font-size: 0.6rem;
+        font-family: 'Alata', sans-serif;
+        margin: 0 0.5rem;
+        color: var(--White);
+        border-bottom: 0.3vw solid rgba(0, 0, 0, 0);
+        transition: .4s;
+        cursor: pointer;
+    }
+
+    .nav--desktop-list-element:hover
+    {
+        border-bottom: 0.3vw solid rgba(255, 255, 255, 1);
+    }
+
+    .closedNav-section
+    {
+        padding: 1.2rem 1rem;
+        background: url(../../reactfolder/public/images/desktop/image-hero.jpg) no-repeat;
+        background-size: cover;
+        background-position: top 0% left 30%;
+        padding-bottom: 7rem;
+        height: 30vw;
+    }
+
+    br
+    {
+        display: none;
+    }
+
+    .nav--header-box
+    {
+        margin-top: 4rem;
+        width: 50%;
+    }
+
+    .description-section
+    {
+        position: relative;
+    }
+
+    .description--image
+    {
+        margin-top: 3rem;
+        width: 50%;
+    }      
+    
+    .description--text-area
+    {
+        position: absolute;
+        top: 6rem;
+        right: 0;
+        width: 45%;
+        padding: 2rem;
+        padding-bottom: 0;
+        background-color: var(--White);
+    }
+
+    .description--header
+    {
+        text-align: left;
+        width: 80%;
+        font-size: 1.1rem;
+        margin: 0;
+    }
+
+    .description--paragraph
+    {
+        font-size: 0.4rem;
+        margin: 0;
+        margin-top: 0.5rem;
+        line-height: 0.65rem;
+        text-align: left;
+        width: 100%;
+    }
+
+    .creations-section
+    {
+        margin-top: 5.5rem;
+        display: grid;
+        grid-template: auto / 1fr 1fr ;
+    }
+
+    .creations--card-box
+    {
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+    .creations--header
+    {
+        font-size: 1.3rem;
+        width: fit-content;
+        margin: 0;
+    }
+
+    .creations--button
+    {
+        margin: 0;
+        font-size: 0.6rem;
+        padding: 0.2rem 1.5rem;
+        border: 0.3vw solid  var(--Black);
+        margin-left: 6.3rem;
+        margin-bottom: 1.5rem;
+
+    }
+
+    .creations--card-img-desktop
+    {
+        display: block;
+    }
+
+    .creations--card-img-mobile
+    {
+        display: none;
+    }
+
+    /* .creations--card-overlay
+    {
+        width: 36.9%;
+    } */
+    
+    .creations--card-box
+    {
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 1vw;
+    }
+
+    .creations--card
+    {
+        width: 95%;
+    }
+
+    .creations--card img
+    {
+        width: 100%;
+    }
+
+    .creations--card-text
+    {
+        width: 50%;
+        font-size: 0.65rem;
+        margin-top: 8rem;
+    }
+
+    .creations--card-overlay
+    {
+        height: 100%;
+    }
+
+    .creations-section
+    {
+        padding-bottom: 2rem;
+    }
+
+    footer
+    {
+        display: grid;
+        grid-template: 15vw 15vw / 1fr 2fr;
+    }
+
+    .footer--icon-container
+    {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        height: fit-content;
+        margin-left: 4rem;
+    }
+
+    .footer--icon-container img
+    {
+        width: 0.8rem;
+    }
+
+    .footer--logo
+    {
+        margin-left: 3rem;
+    }
+
+    .footer--list
+    {
+        display: flex;
+        margin-left: 2rem;
+    }
+
+    .footer--list li 
+    {
+        font-size: 0.45rem;
+        margin: 0 0.5rem;
+        height: fit-content;
+    }
+
+    .footer--copyright
+    {
+        font-size: 0.5rem;
+        margin-top: 1.7rem;
+        margin-left: 1.5rem;
+    }
+}
+
+@media (min-width: 1300px) {
+    *
+    {
+        font-size: 2vw;
+    }
+
+    .nav--header-box
+    {
+        width: 30%;
+        border: 0.3vw solid var(--White);
+    }
+
+    .closedNav-section
+    {
+        padding-bottom: 2rem;
+    }
+
+    .description--header
+    {
+        font-size: 1.4rem;
+    }
+
+    .description--paragraph
+    {
+        font-size: 0.8rem;
+        line-height: 1.1rem;
+    }
+
+    .description--text-area
+    {
+        left: 17rem;
+        top: 10rem;
+    }
+
+    .creations--card-box
+    {
+        width: 90%;
+        grid-template-columns: repeat(4, 20vw);
+    }
+
+    .creations-section
+    {
+        width: 90%;
+        margin: auto;
+        margin-top: 9rem;
+    }
+
+    .creations--button
+    {
+        margin-left: 13.6rem;
+    }
+
+     .creations--card-img-desktop
+    {
+        width: 100% !important;
+        margin: auto;
+    }
+
+    .creations--card-overlay
+    {
+        width: 100%;
+        left: 0rem;
+    }
+
+    .creations--card-text
+    {
+        font-size: 1rem;
+        width: 60%;
+        margin-top: 13.5rem;
+    }
+
+    footer
+    {
+        grid-template: 10vw 10vw / 1fr 2fr;
+    }
+
+    .footer--logo
+    {
+        width: 10rem;
+    }
+
+    .footer--icon-container
+    {
+        margin-left: 15rem;
+    }
+
+    .footer--icon-container img:hover
+    {
+        border-bottom: 0.3vw solid var(--White);
+    }
+
+    .footer--icon-container img
+    {
+        border-bottom: 0.3vw solid var(--Black);
+        width: 1rem;
+        margin: 0 1rem;
+    }
+
+    .footer--list li 
+    {
+        font-size: .7rem;
+        border-bottom: 0.2vw solid var(--Black);
+    }
+
+    .footer--list li:hover
+    {
+        font-size: .7rem;
+        border-bottom: 0.2vw solid var(--White);
+    }
+
+    .footer--copyright
+    {
+        width: fit-content;
+        margin-left: 17rem;
+        font-size: 0.7rem;
+    }
+}
